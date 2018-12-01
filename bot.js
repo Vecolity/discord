@@ -4,7 +4,8 @@ const prefix = '!'
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setPresence({ game: { name: 'in like crazy devolopment', type: 'STREAMING' }, status: 'do not disturb' });
+    client.user.setStatus('dnd');
+    client.user.setActivity('holy ba moly is this in devolopment')
 });
 
 client.on('message', message => {

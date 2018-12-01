@@ -1,15 +1,13 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const commando = require('discord.js-commando');
+const client = new commando.Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
-    if (message.content === 'daddy') {
-    	message.reply('boh sayang wah liao');
-  	}
-});
+bot.regristry.registerGroup('random', 'Random');
+bot.regristry.registerDefaults();
+bot.regristry.registerCommandsIn(__dirname = "/commands")
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);

@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = 'r!'
+const prefix = '!'
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -8,14 +8,14 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
+    if (message.content === prefix + 'ping') {
     	message.reply('pong');
   	}
 });
 
 client.on('message', message => {
-    if (message.content === 'pi') {
-    	message.reply('pong');
+    if (message.content === prefix + 'friendsondiscord') {
+    	message.reply('tuan, tito, mary, peter, ben, jose, maxwell, dylan, mohammed and evan');
   	}
 });
 
